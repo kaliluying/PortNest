@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "desktop",
+  "description": "仅本地 PortNest 窗口使用桌面事件与窗口查询；系统操作由 Rust 命令核验。",
+  "windows": ["panel", "settings"],
+  "permissions": ["core:default"]
+}

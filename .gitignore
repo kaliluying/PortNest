@@ -1,0 +1,10 @@
+node_modules/
+dist/
+target/
+src-tauri/target/
+crates/*/target/
+work/
+outputs/
+src-tauri/gen/
+.DS_Store
+*.log

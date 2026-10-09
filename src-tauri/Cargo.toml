@@ -1,0 +1,21 @@
+[package]
+name = "portnest"
+version = "0.1.0"
+description = "Local development port manager"
+edition = "2021"
+rust-version = "1.85"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon", "macos-private-api", "image-png"] }
+tauri-plugin-autostart = "2"
+tauri-plugin-single-instance = "2"
+portnest-core = { path = "../crates/portnest-core" }
+serde = { version = "1", features = ["derive"] }
+
+[profile.release]
+strip = true
+lto = "thin"
+codegen-units = 1
